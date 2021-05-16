@@ -8,6 +8,7 @@ def subscribe(address, webhook_url=''):
         'web_url': webhook_url
     }
     resp = requests.post(
+        url,
         json=payload
     )
     result = 'failed'
