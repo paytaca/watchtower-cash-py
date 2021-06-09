@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(
-    name='watchtower-py',
+    name='watchtower-cash-py',
     version='0.1.0',    
     description='Library for building Python applications that integrate with Watchtower.cash',
-    url='https://github.com/paytaca/watchtower-py',
+    url='https://github.com/paytaca/watchtower-cash-py',
     author='Joemar Taganna',
     author_email='joemar@paytaca.com',
     license='MIT',
