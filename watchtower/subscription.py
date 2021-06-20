@@ -1,8 +1,8 @@
 import requests
 
 
-def subscribe(address, webhook_url=''):
-    url = 'https://watchtower.cash/api/webhook/subscribe'
+def subscribe(address, project_id, wallet_hash=None, webhook_url=None):
+    url = 'https://watchtower.cash/api/webhook/subscribe/'
     payload = {
         'address': address,
         'web_url': webhook_url
@@ -11,7 +11,4 @@ def subscribe(address, webhook_url=''):
         url,
         json=payload
     )
-    result = 'failed'
-    if resp.status_code == 200:
-        result = 'success'
-    return result
+    return resp.json()
