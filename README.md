@@ -17,7 +17,7 @@ data = {
     address: 'simpleledger:qqz95enwd6qdcy5wnf05hp590sjjknwfuq8sjhpv6x',
     project_id: '0000-0000-0000',  # <-- Generate this ID by creating a project at Watchtower.cash
     wallet_hash: 'abcd0123456', # <-- (Optional) You generate this to track which HD wallet the address belongs to
-    webhook_callback_url: 'https://xxx.com/webhook-call-receiver'  # <-- (Optional) Your webhook receiver URL
+    webhook_url: 'https://xxx.com/webhook-call-receiver'  # <-- (Optional) Your webhook receiver URL
 }
 
 result = watchtower.subscribe(**data)
