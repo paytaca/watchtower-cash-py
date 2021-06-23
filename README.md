@@ -14,10 +14,11 @@ import watchtower
 
 # Subscribe function accepts either BCH or SLP address
 data = {
-    address: 'simpleledger:qqz95enwd6qdcy5wnf05hp590sjjknwfuq8sjhpv6x',
-    project_id: '0000-0000-0000',  # <-- Generate this ID by creating a project at Watchtower.cash
-    wallet_hash: 'abcd0123456', # <-- (Optional) You generate this to track which HD wallet the address belongs to
-    webhook_url: 'https://xxx.com/webhook-call-receiver'  # <-- (Optional) Your webhook receiver URL
+    'address': address, #'simpleledger:qqz95enwd6qdcy5wnf05hp590sjjknwfuq8sjhpv6x',
+    'project_id': x, #'0000-0000-0000',  # <-- Generate this ID by creating a project at Watchtower.cash
+    'wallet_hash': 'abcd0123456', # <-- (Optional) You generate this to track which HD wallet the address belongs to
+    'wallet_index': 0, # <-- (Optional) The index used to generate this address from HD wallet
+    'webhook_url': 'https://xxx.com/webhook-call-receiver'  # <-- (Optional) Your webhook receiver URL
 }
 
 result = watchtower.subscribe(**data)
