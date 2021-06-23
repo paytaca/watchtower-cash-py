@@ -16,7 +16,7 @@ setup(
     author='Joemar Taganna',
     author_email='joemar@paytaca.com',
     license='MIT',
-    packages=['watchtower'],
+    packages=['watchtower', 'watchtower.bch', 'watchtower.slp'],
     install_requires=['requests>=2.22.0'],
 
     classifiers=[

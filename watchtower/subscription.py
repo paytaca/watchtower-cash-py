@@ -1,4 +1,7 @@
-import requests
+try:
+    import requests
+except ImportError:
+    pass
 import uuid
 
 
