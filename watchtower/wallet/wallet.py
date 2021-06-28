@@ -1,7 +1,7 @@
 import requests
 
 
-class BCH(object):
+class Wallet(object):
 
     def __init__(self, testnet=False):
         if testnet:
@@ -9,12 +9,12 @@ class BCH(object):
         else:
             self.base_url = 'https://watchtower.cash/api/'
 
-    def _get_utxos(self, address, amount):
-        url = self.base_url + f'utxo/bch/{address}'
+    def _get_utxos(self, wallet_hash, amount):
+        url = self.base_url + f'utxo/wallet/{wallet_hash}'
         resp = requests.get(url)
         print(resp.status_code)
         print(resp.json())
 
     def send(self, amount):
-        self._get_utxos('x', amount)
+        self._get_utxos('abcd0123456', amount)
         print(f"Sending {amount} BCH...")

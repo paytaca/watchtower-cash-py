@@ -11,3 +11,4 @@ __credits__ = 'Paytaca, Inc.'
 from .subscription import subscribe
 from .bch import BCH
 from .slp import SLP
+from .wallet import Wallet
