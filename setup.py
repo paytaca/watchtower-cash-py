@@ -16,8 +16,16 @@ setup(
     author='Joemar Taganna',
     author_email='joemar@paytaca.com',
     license='MIT',
-    packages=['watchtower', 'watchtower.bch', 'watchtower.slp'],
-    install_requires=['requests>=2.22.0'],
+    packages=[
+        'watchtower',
+        'watchtower.bch',
+        'watchtower.slp',
+        'watchtower.wallet'
+    ],
+    install_requires=[
+        'requests>=2.22.0',
+        'bitcash @ https://github.com/paytaca/bitcash/archive/master.zip'
+    ],
 
     classifiers=[
         'Development Status :: 3 - Alpha',

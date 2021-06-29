@@ -1,0 +1,2 @@
+requests==2.25.1
+git+https://github.com/paytaca/bitcash
