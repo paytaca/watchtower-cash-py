@@ -24,7 +24,10 @@ setup(
     ],
     install_requires=[
         'requests>=2.22.0',
-        'bitcash @ https://github.com/paytaca/bitcash/archive/master.zip'
+        'bitcash'
+    ],
+    dependency_links=[
+        'git+ssh://git@github.com/paytaca/bitcash#egg=bitcash-0.1.0'
     ],
 
     classifiers=[
