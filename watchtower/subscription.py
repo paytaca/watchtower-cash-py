@@ -30,10 +30,9 @@ def subscribe(addresses=None, project_id=None, wallet_hash=None, address_index=N
             'address_index': address_index,
             'webhook_url': webhook_url
         }
-        print(payload)
         resp = requests.post(
             url,
             json=payload
         )
-        return resp # resp.json()
+        return resp.json()
     return response
