@@ -13,7 +13,7 @@ def is_valid_uuid(val):
         return False
 
 
-def subscribe(address, project_id=None, wallet_hash=None, wallet_index=None, webhook_url=None):
+def subscribe(addresses=None, project_id=None, wallet_hash=None, address_index=None, webhook_url=None):
     response = {'success': False}
     proceed = False
     if project_id:
@@ -24,15 +24,16 @@ def subscribe(address, project_id=None, wallet_hash=None, wallet_index=None, web
     if proceed:
         url = 'https://watchtower.cash/api/subscription/'
         payload = {
-            'address': address,
+            'addresses': addresses,
             'project_id': project_id,
             'wallet_hash': wallet_hash,
-            'wallet_index': wallet_index,
+            'address_index': address_index,
             'webhook_url': webhook_url
         }
+        print(payload)
         resp = requests.post(
             url,
             json=payload
         )
-        return resp.json()
+        return resp # resp.json()
     return response
